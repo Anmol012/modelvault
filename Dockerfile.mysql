@@ -1,0 +1,8 @@
+FROM mysql:8.0
+
+ENV MYSQL_DATABASE=modelvault
+ENV MYSQL_ROOT_PASSWORD=yourpassword
+
+COPY src/main/resources/schema.sql /docker-entrypoint-initdb.d/1-schema.sql
+
+EXPOSE 3306

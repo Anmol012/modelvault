@@ -1,0 +1,9 @@
+FROM minio/minio:latest
+
+ENV MINIO_ROOT_USER=minioadmin
+ENV MINIO_ROOT_PASSWORD=minioadmin
+
+CMD ["server", "/data", "--console-address", ":9001"]
+
+EXPOSE 9000
+EXPOSE 9001
